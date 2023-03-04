@@ -11,7 +11,7 @@ Tips:
 Usage:
 ```shell
 # install
-go install 
+go install github.com/VarusHsu/sqlingo-gen-postgres@latest
 # append to your env (optional)
 export PATH="$PATH:$(go env GOPATH)/bin"
 # usage 
