@@ -1,4 +1,4 @@
-module sqlingo-gen-postgres
+module github.com/VarusHsu/sqlingo-gen-postgres
 
 go 1.19
 
