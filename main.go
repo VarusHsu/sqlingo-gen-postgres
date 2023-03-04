@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/VarusHsu/sqlingo-gen-postgres/generator"
 	_ "github.com/lib/pq"
-	generator "sqlingo-gen-postgres/generator"
 )
 
 func main() {
