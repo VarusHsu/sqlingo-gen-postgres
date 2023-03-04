@@ -86,7 +86,7 @@ func getType(fieldDescriptor fieldDescriptor) (goType string, fieldClass string,
 	case "float", "double", "decimal", "real":
 		goType = "float64"
 		fieldClass = "NumberField"
-	case "char", "varchar", "text", "tinytext", "mediumtext", "longtext", "enum", "datetime", "date", "time", "timestamp", "json", "numeric", "character varying", "array", "timestamp without time zone", "timestamp with time zone":
+	case "char", "varchar", "text", "tinytext", "mediumtext", "longtext", "enum", "datetime", "date", "time", "timestamp", "json", "numeric", "character varying", "array", "timestamp without time zone", "timestamp with time zone", "jsonb":
 		goType = "string"
 		fieldClass = "StringField"
 	case "binary", "varbinary", "blob", "tinyblob", "mediumblob", "longblob":
