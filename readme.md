@@ -1,6 +1,6 @@
 # Sqlingo-gen-postgres
 #### A postgres orm model code generator for sqlingo
-#### Wanna more information about sqlingo, see:
+#### Wanna more information about sqlingo, please click:
 #### https://github.com/lqs/sqlingo
 Feature:
 *  Supported postgres array type
