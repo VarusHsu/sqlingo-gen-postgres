@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"go/format"
-
 	"regexp"
 	"strconv"
 	"strings"
@@ -245,9 +244,8 @@ func generateTable(schemaFetcher schemaFetcher, tableName string, forceCases []s
 		if fieldDescriptor.Comment != "" {
 			commentLine = "\t// " + strings.ReplaceAll(fieldDescriptor.Comment, "\n", " ") + "\n"
 		}
-
 		fieldStructName := strings.ToLower(fieldDescriptor.Type) + "_" + className + "_" + goName
-
+		fieldStructName = toLowerFirst(goName)
 		tableLines += commentLine
 		tableLines += "\t" + goName + " " + fieldStructName + "\n"
 
@@ -371,4 +369,14 @@ func (p postgresSchemaFetcher) QuoteIdentifier(identifier string) string {
 
 func newPostgresSchemaFetcher(db *sql.DB) schemaFetcher {
 	return postgresSchemaFetcher{db: db}
+}
+
+func toLowerFirst(words string) string {
+	if len(words) <= 0 {
+		return ""
+	}
+	if words[0] >= 65 && words[0] <= 90 {
+		return string(words[0]+32) + words[1:]
+	}
+	return words
 }
