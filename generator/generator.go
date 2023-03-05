@@ -245,7 +245,7 @@ func generateTable(schemaFetcher schemaFetcher, tableName string, forceCases []s
 			commentLine = "\t// " + strings.ReplaceAll(fieldDescriptor.Comment, "\n", " ") + "\n"
 		}
 		fieldStructName := strings.ToLower(fieldDescriptor.Type) + "_" + className + "_" + goName
-		fieldStructName = toLowerFirst(className)
+		fieldStructName = toLowerFirst(className + "_" + goName)
 		tableLines += commentLine
 		tableLines += "\t" + goName + " " + fieldStructName + "\n"
 
