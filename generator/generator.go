@@ -160,7 +160,7 @@ func Generate() (string, error) {
 	code += "\tsqlingo.StringField\n"
 	code += "}\n\n"
 
-	code += "type booleanField interface {\n"
+	code += "type booleanField interface {\n "
 	code += "\tsqlingo.BooleanField\n"
 	code += "}\n\n"
 	if len(opt.TableNames) == 0 {
