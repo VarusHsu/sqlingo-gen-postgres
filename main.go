@@ -11,6 +11,7 @@ func main() {
 	code, err := generator.Generate()
 	if err != nil {
 		fmt.Println(err)
+	
 	}
 	fmt.Println(code)
 }
