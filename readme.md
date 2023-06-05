@@ -21,6 +21,6 @@ sqlingo-gen-postgres \
 -user postgres \
 -password password \
 -port 5432 \
--db your_db \
+-db db_name \
 > generated/sqlingo/database_name.dsl.go  
 ```
